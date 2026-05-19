@@ -92,12 +92,14 @@ app.get('/', (req, res) => {
 // Importamos os arquivos de rota da pasta /routes
 const rotasCategorias = require('./routers/categorias');
 const rotasProdutos = require('./routers/produtos');
+const rotasPedidos = require('./routes/pedidos');
 
 // app.use('prefixo', router) registra o router com um prefixo de URL.
 // Toda rota definida dentro de categorias.js ficará em /api/categorias/...
 // Toda rota definida dentro de produtos.js ficará em /api/produtos/...
 app.use('/api/categorias', rotasCategorias);
 app.use('/api/produtos', rotasProdutos);
+app.use('/api/pedidos', rotasPedidos);
 
 
 // =============================================================
